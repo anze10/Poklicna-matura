@@ -1444,30 +1444,210 @@ TCP/IP model je praktični okvir, ki temelji na protokolih, uporabljenih v inter
 
 ### 5. Vzdrževanje informacijske strojne opreme (Maintenance of Information Hardware) 🛠️
 
-- **Številski sistemi (Number Systems):** pretvarjanje in računanje - praktični primeri pretvorb in izračunov, iskanje največjega števila s pretvarjanjem, predznačenje binarnih števil, rezultati s potenco števil (conversion and calculation - practical examples of conversions and calculations, finding the largest number by conversion, signed binary numbers, results with powers of numbers).
-    
-- **Zgradba in delovanje računalnika (Computer Architecture and Operation):**
-    
-    - **Matična plošča (Motherboard):** npr. iskanje komponent na matični plošči (e.g., finding components on the motherboard).
-        
-    - **Centralna procesna enota (CPU - Central Processing Unit):** npr. vloga registrov in predpomnilnika pri delovanju procesorja (e.g., the role of registers and cache in processor operation).
-        
-    - **Notranji in zunanji pomnilnik (Internal and External Memory):** npr. tipi glavnega pomnilnika (RAM types), tipi flash pomnilnika (flash memory types).
-        
-    - **Pomnilniški nosilci (Storage Media):** samo novejše tehnologije, brez izračunavanja hitrosti HDD (only newer technologies, without HDD speed calculations).
-        
-    - **Vhodno izhodne enote (Input/Output Units).**
-        
-    - **Hlajenje in napajanje (Cooling and Power Supply).**
-        
-    - **Grafična kartica (Graphics Card).**
-        
-    - **Notranja in zunanja vodila (Internal and External Buses):** npr. vpliv širine naslovnega vodila na dosegljivost pomnilnika (e.g., the impact of address bus width on memory accessibility).
-        
-    - **Vmesniki (Interfaces):** samo novejše tehnologije (only newer technologies, e.g., USB-C, HDMI).
-        
-    - **Servis (Service/Maintenance):** npr. diagnostika in analiza napak delovanja sistema, razlaga in vrednotenje podatkov iz orodij za diagnostiko, iskanje podatkov iz priročnika ali tehnične specifikacije, izbira in uporaba ustreznih komponent za namestitev (e.g., diagnostics and analysis of system malfunctions, interpretation and evaluation of data from diagnostic tools, finding data from a manual or technical specification, selection and use of appropriate components for installation).
-        
-    - **Uporaba ustreznih merskih enot (Use of appropriate units of measurement).**
-        
-    - **Vrednotenje zmogljivosti sistemov (Evaluation of system performance):** npr. hitrost procesorja (processor speed), kapaciteta pomnilnika (memory capacity).
+Vzdrževanje informacijske strojne opreme je ključnega pomena za zagotavljanje zanesljivega in dolgotrajnega delovanja računalniških sistemov ter njihovih komponent. Redno in pravilno vzdrževanje lahko prepreči nepričakovane okvare, izgubo podatkov in podaljša življenjsko dobo opreme.
+
+---
+
+## Številski sistemi (Number Systems)
+
+Številski sistem je sistem, v katerem so urejena števila. Za računalniško obdelavo morajo biti podatki pretvorjeni (kodirani) v obliko, primerno za računalnik. Vsako pretvorbo iz ene oblike v drugo obliko zapisa imenujemo **kodiranje**.
+
+- **Dvojiški (Binarni) sistem (Binary System - osnova 2):** Uporablja samo števki 0 in 1. Je temelj delovanja računalnikov, saj ti interno shranjujejo in obdelujejo podatke v binarni obliki. Vsako mesto v dvojiškem številu imenujemo **bit**.
+- **Desetiški (Decimalni) sistem (Decimal System - osnova 10):** Vsakdanji sistem s števkami 0-9.
+- **Šestnajstiški (Heksadecimalni) sistem (Hexadecimal System - osnova 16):** Uporablja števke 0-9 in črke A-F (kjer A=10, B=11, C=12, D=13, E=14, F=15). Uporablja se za krajšo in bolj pregledno predstavitev dvojiških števil (npr. MAC naslovi, barvne kode).
+- **Pretvarjanje med sistemi (Number System Conversions):**
+    - **Desetiško v dvojiško:** Decimalno število se zaporedno deli z 2, dokler količnik ni 0. Ostanki deljenja, zapisani v obratnem vrstnem redu, tvorijo dvojiško število.
+        - Primer: 2510​=110012​.
+    - **Dvojiško v desetiško:** Vsako dvojiško mesto se pomnoži z 2 na ustrezno potenco (začne se s potenco 0 na desni) in seštevki se seštejejo.
+        - Primer: 11012​=1⋅23+1⋅22+0⋅21+1⋅20=8+4+0+1=1310​.
+    - **Desetiško v šestnajstiško:** Decimalno število se zaporedno deli s 16. Ostanki (kjer se 10-15 zamenja z A-F) se zapišejo v obratnem vrstnem redu.
+        - Primer: 172110​=6B916​. 17510​=AF16​.
+    - **Šestnajstiško v desetiško:** Vsako šestnajstiško mesto se pomnoži s 16 na ustrezno potenco in seštevki se seštejejo.
+        - Primer: A316​=10⋅161+3⋅160=160+3=16310​.
+    - **Dvojiško v šestnajstiško in obratno:** Dvojiško število razdelimo v skupine po 4 bite (od desne) in vsako skupino pretvorimo v eno šestnajstiško števko (ali obratno).
+- **Predznačena binarna števila (Signed Binary Numbers):** Način zapisa pozitivnih in negativnih števil v dvojiškem sistemu (npr. predznak in velikost, dvojni komplement).
+- **Dvojiška aritmetika (Binary Arithmetic):** Osnovne operacije, kot sta seštevanje in odštevanje, se izvajajo po pravilih dvojiškega sistema.
+- **BCD kodiranje (Binary Coded Decimal):** Vsaka desetiška števka se posebej kodira s 4-bitnim dvojiškim številom.
+
+---
+
+## Uporaba ustreznih merskih enot (Use of appropriate units of measurement)
+
+- **Količina podatkov:**
+    - **Bit (b):** Najmanjša enota informacije, lahko ima vrednost 0 ali 1.
+    - **Bajt (Byte - B):** Skupina 8 bitov (1 B = 8 b).
+    - **Decimalni prefiksi (SI):** Temeljijo na potenci 10.
+        - Kilobajt (KB) = 1000 B.
+        - Megabajt (MB) = 1000 KB=106 B.
+        - Gigabajt (GB) = 1000 MB=109 B.
+        - Terabajt (TB) = 1000 GB=1012 B.
+    - **Dvojiški prefiksi (IEC):** Temeljijo na potenci 2, bolj natančni pri opisu kapacitet pomnilnika.
+        - Kibibajt (KiB) = 1024 B (210 B).
+        - Mebibajt (MiB) = 1024 KiB (220 B).
+        - Gibibajt (GiB) = 1024 MiB (230 B).
+        - Tebibajt (TiB) = 1024 GiB (240 B).
+        - Razlika med MB in MiB je pomembna, saj proizvajalci diskov pogosto uporabljajo decimalne, operacijski sistemi pa dvojiške vrednosti, kar vodi do navidezne razlike v kapaciteti.
+- **Hitrost prenosa podatkov (Data Transfer Rate):**
+    - Bitov na sekundo (bps).
+    - Kilobitov na sekundo (Kbps ali kb/s).
+    - Megabitov na sekundo (Mbps ali Mb/s).
+    - Gigabitov na sekundo (Gbps ali Gb/s).
+    - Osnovna enačba za hitrost prenosa: Hitrost prenosa=CˇasKolicˇina podatkov​. Iz tega lahko izpeljemo čas prenosa: Cˇas prenosa=Hitrost prenosa (v bitih na sekundo)Kolicˇina podatkov (v bitih)​.
+    - Primer: Prenos datoteke velikosti 5 GB pri hitrosti 10 Mbps: 5 GB=5×1024 MB=5120 MB (v kontekstu datotek se pogosteje uporablja 210 za kilo, mega itd.) 5120 MB×8MBMb​=40960 Mb Cˇas=10 Mbps40960 Mb​=4096 sekund≈68.27 minut.
+- **Frekvenca (Frequency):** Uporablja se za merjenje takta procesorja, pomnilnika.
+    - Hertz (Hz): En cikel na sekundo.
+    - Megahertz (MHz): Milijon ciklov na sekundo.
+    - Gigahertz (GHz): Milijarda ciklov na sekundo.
+- **Izračun velikosti datoteke (primer za nekompresiran avdio):** Velikost (v bajtih)=Trajanje (s)×Frekvenca vzorcˇenja (Hz)×Sˇt. kanalov×8Bitna globina (biti)​ ali če je bitna globina že v bajtih: Velikost (v bajtih)=Trajanje (s)×Frekvenca vzorcˇenja (Hz)×Sˇt. kanalov×Globina vzorcˇenja (bajti)
+
+---
+
+## Zgradba in delovanje računalnika (Computer Architecture and Operation)
+
+Računalnik je sistem medsebojno povezanih komponent, ki skupaj obdelujejo podatke in izvajajo ukaze. Glavni namen je sprejemanje vhodnih podatkov, njihova obdelava in prikaz rezultatov na izhodnih napravah.
+
+- **Osnovno delovanje ob zagonu (Boot Process):**
+    1. **Vklop:** Napajalnik (PSU) oskrbi komponente z električno energijo.
+    2. **POST (Power-On Self-Test):** BIOS/UEFI izvede samopreverjanje osnovne strojne opreme (CPU, RAM, grafična kartica, diski).
+    3. **Iskanje zagonskega medija:** BIOS/UEFI poišče zagonski sektor (boot sector) na mediju, določenem v zagonskem vrstnem redu (npr. SSD, HDD, USB).
+    4. **Nalaganje operacijskega sistema (OS Loading):** Zagonski nalagalnik (bootloader) naloži jedro (kernel) operacijskega sistema v RAM.
+    5. **Inicializacija OS:** Operacijski sistem prevzame nadzor, naloži gonilnike in sistemske storitve. Računalnik je pripravljen za uporabo.
+- **Ključne komponente računalnika:**
+    - **Matična plošča (Motherboard):** Osrednja tiskana vezna plošča, ki fizično povezuje vse druge komponente (CPU, RAM, grafična kartica, razširitvene kartice) in omogoča njihovo medsebojno komunikacijo ter prenos podatkov. Na njej so različni čipi, vključno s **čipovjem (chipset)**, ki nadzira pretok podatkov.
+        - **Komponente na matični plošči:**
+            - **Procesorsko podnožje/vtičnica (CPU Socket):** Mesto za namestitev procesorja.
+            - **Reže za pomnilnik (RAM Slots):** Za namestitev modulov RAM.
+            - **Čipovje (Chipset):** Skupina integriranih vezij, ki upravlja komunikacijo med CPU, RAM, razširitvenimi karticami in perifernimi napravami. Določa združljivost komponent in nekatere funkcionalnosti matične plošče.
+            - **Razširitvene reže (Expansion Slots):** Npr. PCIe (Peripheral Component Interconnect Express) reže za grafične kartice, zvočne kartice, mrežne kartice itd.
+            - **Priključki za pomnilniške nosilce:** SATA (za HDD/SSD), M.2 (za SSD, podpira SATA in NVMe protokole).
+            - **Priključki za napajanje:** Za povezavo z napajalnikom.
+            - **BIOS/UEFI čip:** Vsebuje osnovno programsko opremo za zagon.
+            - **CMOS baterija:** Napaja CMOS pomnilnik, ki hrani nastavitve BIOS/UEFI, ko je računalnik izklopljen.
+            - Vgrajeni priključki za periferne naprave (USB, avdio, LAN).
+        - **Formati (Form Factor):** Standardizirane velikosti in razporeditve komponent (npr. ATX, Micro-ATX, Mini-ITX), ki določajo združljivost z ohišji in število rež.
+        - **BIOS (Basic Input/Output System) in UEFI (Unified Extensible Firmware Interface):**
+            - **BIOS:** Starejša programska oprema, shranjena na ROM čipu, ki se zažene ob vklopu računalnika, izvede POST in naloži operacijski sistem.
+            - **UEFI:** Novejši naslednik BIOS-a z naprednejšimi funkcijami: grafični vmesnik, hitrejši zagon, podpora za večje diske (nad 2TB z GPT), boljša varnost (npr. Secure Boot).
+            - **Nastavitve BIOS/UEFI:** Dostopne ob zagonu (npr. s tipko Del, F2, F10). Omogočajo konfiguracijo strojne opreme: zagonski vrstni red (boot order), nastavitve CPU in RAM (frekvence, napetosti), sistemski čas in datum, omogočanje/onemogočanje vgrajenih naprav, diagnostika.
+    - **Centralno procesna enota (CPU - Central Processing Unit) / Procesor:** "Možgani" računalnika, ki izvajajo programske ukaze in obdelujejo podatke. Izvaja vse računske in logične operacije.
+        - **Osnovno delovanje (cikel izvajanja ukaza):**
+            1. **Prevzem ukaza (Fetch):** Krmilna enota prevzame naslednji ukaz iz pomnilnika (RAM ali predpomnilnika).
+            2. **Dekodiranje ukaza (Decode):** Krmilna enota razčleni ukaz, da ugotovi, katero operacijo je treba izvesti.
+            3. **Izvedba ukaza (Execute):** Aritmetično-logična enota (ALE) izvede operacijo (npr. seštevanje, primerjanje).
+            4. **Zapis rezultata (Write-back/Store):** Rezultat operacije se shrani nazaj v register ali pomnilnik.
+        - **Deli procesorja:**
+            - **Aritmetično-logična enota (ALE/ALU):** Izvaja aritmetične (seštevanje, odštevanje itd.) in logične (AND, OR, NOT itd.) operacije nad podatki.
+            - **Krmilna enota (Control Unit - CU):** Upravlja in usklajuje delovanje vseh delov procesorja in ostalih komponent sistema. Skrbi za pretok podatkov in ukazov.
+            - **Registri (Registers):** Majhne, zelo hitre pomnilniške celice znotraj CPU za začasno shranjevanje podatkov, ukazov ali naslovov, s katerimi procesor trenutno operira.
+        - **Tehnične značilnosti procesorja:**
+            - **Takt (Clock Speed/Frequency):** Hitrost, s katero procesor izvaja cikle, merjena v Hertzih (Hz), običajno Gigahercih (GHz). Višji takt običajno pomeni hitrejše delovanje.
+                - Čas za en cikel (t) je obratna vrednost frekvence (f): t=f1​.
+                - Primer: Če je frekvenca procesorja 3.8 GHz: t=3.8×109 Hz1​≈0.263×10−9 s=0.263 ns.
+            - **Število jeder (Cores):** Jedro je samostojna procesna enota znotraj CPU. Več jeder omogoča sočasno izvajanje več opravil (multitasking) ali hitrejše izvajanje programov, ki podpirajo večnitno delovanje (multithreading).
+            - **Število niti (Threads):** Nit je zaporedje ukazov, ki jih lahko obdeluje jedro. Nekateri procesorji podpirajo tehnologijo sočasnega večnitnega izvajanja (npr. Intel Hyper-Threading, AMD SMT), kjer eno fizično jedro lahko obdeluje dve niti hkrati.
+            - **Predpomnilnik (Cache Memory):** Majhen, hiter SRAM pomnilnik, integriran v CPU ali zelo blizu njega, za shranjevanje pogosto uporabljenih podatkov in ukazov, kar zmanjša čas dostopa do počasnejšega RAM-a. Obstaja več nivojev: L1 (najmanjši, najhitrejši, ločen za ukaze in podatke), L2 (večji, počasnejši od L1), L3 (še večji, počasnejši od L2, pogosto deljen med jedri), L4 (redkejši).
+            - **Arhitektura (Instruction Set Architecture - ISA):** Nabor ukazov, ki jih procesor razume (npr. x86, x86-64/AMD64, ARM). Število bitov (32-bitni ali 64-bitni) določa, koliko podatkov lahko procesor obdela naenkrat in maksimalno količino naslovljivega RAM-a.
+            - **Podnožje (Socket):** Fizični vmesnik (tip konektorja) na matični plošči, v katerega se vgradi procesor. Procesor in matična plošča morata imeti združljivo podnožje.
+        - **Proizvajalci:** Glavna proizvajalca sta Intel (serije Celeron, Pentium, Core i3/i5/i7/i9, Xeon) in AMD (serije Athlon, Ryzen, EPYC, prej Fusion, FX, Opteron).
+    - **Pomnilnik (Memory):**
+        - **Delovni pomnilnik (RAM - Random Access Memory):** Hiter, hlapljiv (volatile - podatki se ob izklopu izgubijo) pomnilnik, kjer računalnik začasno shranjuje podatke in programe, ki jih trenutno uporablja procesor.
+            - **Vrste RAM:**
+                - **DRAM (Dynamic RAM):** Najpogostejši tip glavnega pomnilnika. Potrebuje nenehno osveževanje, da ohrani podatke. Je cenejši in ima večjo gostoto kot SRAM.
+                    - **DDR SDRAM (Double Data Rate Synchronous DRAM):** Različne generacije (DDR, DDR2, DDR3, DDR4, DDR5) prinašajo višje hitrosti prenosa podatkov, večje kapacitete in nižjo porabo energije.
+                - **SRAM (Static RAM):** Hitrejši od DRAM, ne potrebuje osveževanja. Je dražji in se uporablja za predpomnilnike (cache) v procesorjih.
+        - **Bralni pomnilnik (ROM - Read-Only Memory):** Nehlapljiv pomnilnik, katerega vsebina je običajno zapisana med proizvodnjo in je ni mogoče enostavno spreminjati (ali pa sploh ne). Vsebuje firmware, kot je BIOS/UEFI.
+            - **Vrste ROM:** PROM (Programmable ROM - enkrat zapisljiv), EPROM (Erasable PROM - brisljiv z UV svetlobo), EEPROM (Electrically Erasable PROM - električno brisljiv in zapisljiv).
+        - **Flash pomnilnik (Flash Memory):** Vrsta EEPROM, ki se uporablja v SSD diskih, USB ključih, pomnilniških karticah. Nehlapljiv.
+        - **Pomnilniška hierarhija (Memory Hierarchy):** Sistem več nivojev pomnilnika z različnimi hitrostmi, kapacitetami in cenami, urejen tako, da CPU čim hitreje dostopa do potrebnih podatkov. Nivoji od najhitrejšega do najpočasnejšega: Registri CPU -> L1 Cache -> L2 Cache -> L3 Cache -> RAM -> SSD/HDD (navidezni pomnilnik) -> Arhivski mediji.
+        - Maksimalna količina naslovljivega pomnilnika: 2sˇirina naslovnega vodila (v bitih).
+    - **Pomnilniški nosilci (Storage Devices - Dolgoročni pomnilnik):** Trajno shranjevanje operacijskega sistema, programov in uporabniških podatkov.
+        - **Trdi disk (HDD - Hard Disk Drive):** Elektromehanska naprava, ki shranjuje podatke na vrtečih se magnetnih ploščah z uporabo bralno-pisalnih glav.
+            - **Organizacija podatkov:** Plošče (platters), sledi (tracks), sektorji (sectors), cilindri (cylinders).
+            - **Tehnične lastnosti:** Kapaciteta (GB, TB), hitrost vrtenja (RPM - revolutions per minute, npr. 5400, 7200), vmesnik (SATA), predpomnilnik (cache).
+            - **Prednosti:** Velika kapaciteta, nizka cena na GB.
+            - **Slabosti:** Počasnejši dostopni časi in hitrosti prenosa v primerjavi s SSD, mehanski deli so občutljivi na udarce in obrabo, višja poraba energije, hrup, **fragmentacija** podatkov.
+            - **Dostopni čas HDD:** Dostopni cˇas=Iskalni cˇas+Latenca vrtenja+Cˇas prenosa.
+            - **Kapaciteta HDD (približno):** Sˇt. cilindrov×Sˇt. glav×Sˇt. sektorjev/sled×Velikost sektorja.
+        - **SSD (Solid State Drive):** Uporablja polprevodniške flash pomnilniške čipe za shranjevanje podatkov, brez gibljivih delov.
+            - **Tehnične lastnosti:** Kapaciteta, hitrost branja/pisanja (MB/s, IOPS), vmesnik (SATA, M.2, PCIe/NVMe), tip flash pomnilnika (SLC, MLC, TLC, QLC).
+            - **Prednosti:** Zelo hitri dostopni časi in hitrosti prenosa, tiho delovanje, manjša poraba energije, večja odpornost na udarce, ni fragmentacije.
+            - **Slabosti:** Višja cena na GB (čeprav se razlika manjša), omejeno število zapisovalnih ciklov na celico (sodobni SSD-ji imajo napredne tehnologije za podaljšanje življenjske dobe).
+        - **NVMe (Non-Volatile Memory Express):** Komunikacijski vmesnik in gonilnik, zasnovan posebej za SSD-je, ki uporabljajo PCIe vodilo, kar omogoča bistveno višje hitrosti kot SATA.
+        - **Zunanji diski:** HDD ali SSD v ohišju s priključkom USB ali Thunderbolt.
+        - **Optični pogoni in mediji:** CD, DVD, Blu-ray (vse manj pogosti).
+        - **RAID (Redundant Array of Independent Disks):** Tehnologija, ki združuje več fizičnih diskov v eno ali več logičnih enot za izboljšanje zmogljivosti (hitrosti), redundance (varnosti podatkov) ali obojega.
+            - **RAID 0 (Striping - porazdeljevanje):** Podatki se delijo in zapisujejo čez vse diske v polju. Poveča hitrost branja in pisanja. Brez redundance – če en disk odpove, so vsi podatki na vseh diskih izgubljeni. Potrebujeta vsaj 2 diska.
+            - **RAID 1 (Mirroring - zrcaljenje):** Podatki se hkrati zapisujejo na dva (ali več) diska, kar ustvari natančno kopijo. Zagotavlja visoko varnost podatkov; če en disk odpove, so podatki še vedno na voljo na drugem. Uporabna kapaciteta je enaka kapaciteti najmanjšega diska v polju (če sta dva). Potrebujeta vsaj 2 diska.
+            - **RAID 5 (Striping with Parity - porazdeljevanje s pariteto):** Podatki in paritetne informacije (za obnovo podatkov) so porazdeljeni med tremi ali več diski. Omogoča obnovo podatkov ob odpovedi enega diska. Dobro ravnovesje med zmogljivostjo, kapaciteto in redundanco. Potrebuje vsaj 3 diske.
+            - **RAID 10 (ali RAID 1+0):** Kombinacija zrcaljenja in porazdeljevanja. Podatki se najprej zrcalijo (RAID 1), nato pa se te zrcaljene skupine porazdelijo (RAID 0). Ponuja visoko hitrost in dobro redundanco. Potrebuje vsaj 4 diske.
+        - **Priključki za diske:** SATA, M.2, PCIe. Starejši: IDE.
+        - **Particioniranje diskov (Disk Partitioning):** Postopek razdelitve fizičnega diska na eno ali več logičnih enot, imenovanih particije. Vsaka particija se lahko formatira z drugačnim datotečnim sistemom in jo operacijski sistem vidi kot ločen disk. Uporabno za organizacijo podatkov, namestitev več operacijskih sistemov, ločevanje OS od uporabniških podatkov.
+        - **MBR (Master Boot Record) vs. GPT (GUID Partition Table):** Standarda za shranjevanje informacij o particijah na disku.
+            - **MBR:** Starejši standard, omejen na diske do 2TB in do 4 primarne particije (ali 3 primarne in 1 razširjeno).
+            - **GPT:** Novejši standard, del UEFI. Podpira diske večje od 2TB, do 128 particij v Windows, bolj zanesljiv zaradi replikacije particijske tabele.
+        - **Datotečni sistemi (File Systems):** Organizacijska struktura, ki jo operacijski sistem uporablja za shranjevanje, iskanje in upravljanje datotek na pomnilniškem nosilcu. Primeri: FAT32, exFAT, NTFS (Windows), HFS+, APFS (Apple), ext4 (Linux).
+            - **Dovoljenja datotek in imenikov (File and Directory Permissions):** Nadzor dostopa do datotek in map (branje, pisanje, izvajanje) za različne uporabnike in skupine, kar vpliva na varnost podatkov.
+        - **Fragmentacija diska (Disk Fragmentation):** Pojav pri HDD diskih, kjer se deli datoteke shranijo na ne-sosednjih lokacijah na disku, kar upočasni dostop, saj mora bralno-pisalna glava večkrat premikati.
+        - **Defragmentacija diska (Disk Defragmentation):** Postopek prerazporejanja fragmentiranih delov datotek na HDD disku, tako da so shranjeni zaporedno, kar pospeši dostop. SSD diski defragmentacije ne potrebujejo (in jim lahko skrajša življenjsko dobo).
+    - **Vhodno-izhodne enote (Input/Output - I/O Devices):** Komponente, ki omogočajo interakcijo med uporabnikom in računalnikom ter med računalnikom in drugimi napravami.
+        - **Vhodne enote (Input Devices):** Pošiljajo podatke v računalnik. Primeri: tipkovnica, miška, optični bralnik (scanner), mikrofon, spletna kamera, sledilna ploščica (touchpad), zaslon na dotik.
+        - **Izhodne enote (Output Devices):** Prikazujejo ali oddajajo podatke iz računalnika. Primeri: zaslon (monitor), tiskalnik, zvočniki, slušalke, projektor.
+        - **Vhodno/Izhodne enote:** Nekatere naprave opravljajo obe funkciji (npr. zaslon na dotik, mrežna kartica, zunanji diski).
+    - **Hlajenje (Cooling) in Napajalnik (Power Supply Unit - PSU):**
+        - **Hlajenje:** Komponente med delovanjem proizvajajo toploto, ki jo je treba odvesti, da se prepreči pregrevanje in poškodbe.
+            - **Pasivno hlajenje:** Hladilna telesa (heatsinks) – kovinski bloki z rebri, ki povečajo površino za oddajanje toplote.
+            - **Aktivno hlajenje:** Ventilatorji (fans), ki pospešujejo pretok zraka preko hladilnih teles ali skozi ohišje. Tekočinsko hlajenje (liquid cooling) za zahtevnejše sisteme.
+            - Redno čiščenje prahu iz ventilatorjev in hladilnih teles je pomembno za ohranjanje učinkovitosti hlajenja.
+        - **Napajalnik (PSU):** Pretvori izmenično napetost (AC) iz električnega omrežja v stabilne enosmerne napetosti (DC), ki jih potrebujejo različne komponente računalnika (+3.3V, +5V, +12V). Pomembne lastnosti so izhodna moč (merjena v Vatih - W), učinkovitost (npr. certifikati 80 PLUS Bronze, Silver, Gold, Platinum, Titanium), število in tipi konektorjev.
+    - **Grafična kartica (GPU - Graphics Processing Unit / Video Card):** Specializirana elektronska vezja za obdelavo slik in grafike ter njihov prikaz na zaslonu. Odgovorna je za renderiranje 2D in 3D grafike, video predvajanje in druge grafično intenzivne naloge.
+        - **Integrirana grafika (Integrated GPU):** Vgrajena v procesor (CPU) ali na matično ploščo. Primerna za osnovna opravila, manj zahtevne igre in varčevanje z energijo.
+        - **Diskretna (namenska) grafična kartica (Discrete GPU):** Ločena kartica, ki se vgradi v PCIe režo na matični plošči. Ponuja bistveno večjo zmogljivost za igre, profesionalno grafično oblikovanje, video urejanje, strojno učenje.
+        - **Ključne komponente/lastnosti:**
+            - **Grafični procesor (GPU chip):** Glavni del kartice, ki izvaja izračune.
+            - **Video pomnilnik (VRAM):** Namenski RAM na grafični kartici (npr. GDDR6, GDDR6X) za shranjevanje tekstur, medpomnilnikov okvirjev (framebuffers) in drugih grafičnih podatkov. Kapaciteta (npr. 8GB, 12GB, 16GB) je pomembna za višje ločljivosti in kakovostnejše teksture.
+            - Takt jedra (Core Clock) in pomnilnika (Memory Clock).
+            - Število procesorskih enot (npr. CUDA jedra pri NVIDIA, Stream Procesorji pri AMD).
+            - Priključki za zaslone (HDMI, DisplayPort).
+    - **Vodila (Buses):** Komunikacijske poti (skupine žic ali optičnih vlaken) na matični plošči in znotraj komponent, ki omogočajo prenos podatkov, naslovov in krmilnih signalov med različnimi deli računalniškega sistema.
+        - **Vrste vodil glede na namen:**
+            - **Podatkovno vodilo (Data Bus):** Prenaša podatke med CPU, RAM-om in drugimi komponentami. Njegova širina (npr. 32-bitna, 64-bitna) določa, koliko bitov podatkov se lahko prenese hkrati, kar vpliva na hitrost prenosa.
+            - **Naslovno vodilo (Address Bus):** Prenaša naslove pomnilniških lokacij ali V/I naprav, do katerih želi CPU dostopati. Njegova širina določa največjo količino pomnilnika, ki ga sistem lahko naslovi (npr. 32-bitno naslovno vodilo lahko naslovi 232 lokacij, kar je 4 GB).
+            - **Krmilno vodilo (Control Bus):** Prenaša krmilne signale (npr. za branje/pisanje, zahteva za prekinitev) in signale o stanju med komponentami sistema.
+        - **Primeri sistemskih in razširitvenih vodil:**
+            - **FSB (Front Side Bus) - starejše:** Povezoval CPU z northbridge čipom.
+            - **PCI (Peripheral Component Interconnect):** Starejše razširitveno vodilo.
+            - **AGP (Accelerated Graphics Port):** Starejše vodilo, namenjeno grafičnim karticam.
+            - **PCIe (Peripheral Component Interconnect Express):** Sodobno, hitro serijsko razširitveno vodilo za grafične kartice, SSD diske (NVMe), mrežne kartice itd. Obstaja v različnih različicah (npr. PCIe 3.0, 4.0, 5.0) in širinah (x1, x4, x8, x16).
+            - **SATA (Serial ATA):** Vodilo za povezavo HDD in SSD diskov.
+            - **USB (Universal Serial Bus):** Vodilo za priklop širokega nabora zunanjih naprav.
+    - **Vmesniki (Interfaces):** Fizični priključki in protokoli, ki omogočajo povezavo med računalnikom in perifernimi napravami ali drugimi sistemi.
+        - **Notranji vmesniki:** SATA, M.2, PCIe reže.
+        - **Zunanji vmesniki (konektorji na ohišju):** USB (Type-A, Type-C), HDMI, DisplayPort, Ethernet (RJ-45), avdio priključki (3.5mm jack), Thunderbolt.
+
+---
+
+## Servis in vzdrževanje (Service and Maintenance)
+
+- **Preventivno vzdrževanje (Preventive Maintenance):** Dejavnosti za ohranjanje delovanja in preprečevanje okvar.
+    - **Redno čiščenje prahu:** Iz notranjosti ohišja, ventilatorjev, hladilnih teles in komponent (npr. s stisnjenim zrakom). Prah lahko povzroči pregrevanje in okvare.
+    - **Posodabljanje programske opreme:** Redno posodabljanje operacijskega sistema, gonilnikov (drivers) za strojno opremo in firmware-a (npr. BIOS/UEFI, firmware SSD diskov) za izboljšanje stabilnosti, zmogljivosti in varnosti.
+    - **Preverjanje stanja pomnilniških nosilcev:** Uporaba orodij, kot je `chkdsk` (Check Disk) v Windows, za preverjanje napak na datotečnem sistemu in fizičnih napak na HDD. S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) podatki lahko napovejo bližajočo se odpoved diska.
+    - **Preverjanje sistema hlajenja:** Zagotavljanje, da ventilatorji delujejo pravilno in da hladilna telesa niso zamašena s prahom. Po potrebi zamenjava termalne paste na CPU/GPU.
+- **Diagnostika in odpravljanje napak (Diagnostics and Troubleshooting):**
+    - **Prepoznavanje simptomov:** Nenadni ponovni zagoni, "modri zasloni smrti" (BSOD), počasno delovanje, nenavadni zvoki, napake pri zagonu.
+    - **Uporaba diagnostičnih orodij:** Programska oprema za testiranje komponent (RAM, CPU, HDD/SSD, GPU), sistemski dnevniki (event logs), zvočni signali BIOS-a (beep codes) ob zagonu, ki kažejo na specifične napake.
+    - **Postopno odpravljanje težav:** Preverjanje povezav, odstranjevanje nedavno dodane strojne opreme, testiranje komponent posamično.
+    - **Iskanje informacij:** Uporaba priročnikov za strojno opremo, tehničnih specifikacij, spletnih forumov in baz znanja.
+- **Izbira in namestitev komponent:** Pravilna izbira združljivih komponent za nadgradnjo ali zamenjavo (npr. CPU in podnožje matične plošče, tip RAM-a, moč napajalnika). Varna in pravilna namestitev.
+
+---
+
+## Vrednotenje zmogljivosti sistemov (System Performance Evaluation)
+
+- **Merila zmogljivosti:** Hitrost procesorja (takt, IPC - instructions per cycle, število jeder/niti), količina in hitrost RAM-a (frekvenca, zakasnitve - timings), hitrost branja/pisanja in IOPS (Input/Output Operations Per Second) pomnilniških nosilcev, zmogljivost grafične kartice (hitrost sličic - FPS v igrah, čas renderiranja).
+- **Programska oprema za testiranje (Benchmarking Software):** Orodja, ki izvajajo standardizirane teste za merjenje in primerjavo zmogljivosti komponent ali celotnega sistema (npr. Cinebench za CPU, 3DMark za GPU, CrystalDiskMark za diske).
+- **Primeri specifikacij komponent in njihov pomen:**
+    - **Procesor (CPU):** Npr. Intel Core i7-12700K ima 12 jeder (8 zmogljivostnih P-jeder in 4 energijsko učinkovita E-jedra) in 20 niti. Osnovna taktna frekvenca je 3.6 GHz. Več jeder in niti ter višji takt običajno pomenijo boljšo zmogljivost pri zahtevnih opravilih in večopravilnosti.
+    - **Pomnilnik (RAM):** Npr. modul Corsair Vengeance LPX 16GB DDR4 ima frekvenco 3200 MHz in kapaciteto 16GB. Večja kapaciteta omogoča sočasno delo z več programi, višja frekvenca pa hitrejši prenos podatkov med RAM-om in CPU.
+    - **SSD disk:** Npr. Samsung 970 EVO Plus 1TB NVMe SSD ima hitrost branja do 3500 MB/s in hitrost zapisovanja do 3300 MB/s. Te hitrosti bistveno vplivajo na odzivnost sistema, hitrost zagona OS in nalaganja programov.
+    - **Grafična kartica (GPU):** Npr. NVIDIA GeForce RTX 3060 ima 12 GB GDDR6 video pomnilnika (VRAM). Količina in hitrost VRAM-a sta pomembni za igranje iger pri višjih ločljivostih in grafičnih nastavitvah, pa tudi za profesionalne aplikacije, kot sta 3D modeliranje in video urejanje.
